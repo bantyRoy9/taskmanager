@@ -95,7 +95,7 @@ const Login = () => {
                 />
             </div>
             <div className="col-md-12">
-                <button type="submit" className="btn btn-primary col-md-12">Login</button>
+                <button type="submit"  style={{width:"100%"}} className="btn btn-primary col-md-12">Login</button>
             </div>
           </form>
           <form className="signupForm" ref={signupTab} onSubmit={(e)=>submitHandler(e)}>
@@ -142,8 +142,8 @@ const Login = () => {
                 pattern={/^[ A-Za-z0-9_@./#&+-].{7,}$/}
               />
             </div>
-            <div className="col-md-12">
-                <button type="submit" className="btn btn-primary col-md-12">Sign up</button>
+            <div className="col-md-12" style={{width:"100%"}} >
+                <button type="submit" style={{width:"100%"}} className="btn btn-primary col-md-12">Sign up</button>
             </div>
           </form>
         </div>

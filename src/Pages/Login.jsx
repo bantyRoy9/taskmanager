@@ -26,7 +26,8 @@ const Login = () => {
       };
     }
     dispatch(userAction(user,submitType));
-    window.location.reload()
+    alert("User created successfull. Plese login!")
+    navigate("/")
   };
   
   const changeHandler = (e) => {

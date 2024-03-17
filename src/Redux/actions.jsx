@@ -1,5 +1,4 @@
 export const userAction = (user,submitType) =>async(dispatch) =>{
-    debugger
     if(submitType === "Login"){
         dispatch({type:"USER_LOGIN_SUCCESS",payload:user})
     }else{

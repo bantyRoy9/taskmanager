@@ -26,8 +26,8 @@ const Login = () => {
       };
     }
     dispatch(userAction(user,submitType));
-    alert("User created successfull. Plese login!")
-    navigate("/")
+    submitType !== "Login" && alert("User created successfully. Login again!");
+    window.location.href="/"
   };
   
   const changeHandler = (e) => {

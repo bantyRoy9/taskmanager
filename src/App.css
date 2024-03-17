@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.formInput{position: relative;}
+.pointer{cursor: pointer;}
+table .btn{
+  padding: 8px;
+  font-size: 10px;
+  margin: 5px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button.btn-primary{
+  background: var(--bg-bth) !important;
+  outline: none !important;
+  border: none !important;
+  text-align: center !important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input::placeholder{
+  color: var(--text-col-icon) !important;
+  font-size: 14px;
   display: flex;
-  flex-direction: column;
+  align-items: center !important;
+  padding: inherit;
+  padding-left: 0px !important;
+}
+input.invalid::placeholder{
+  color: var(--text-col-error) !important;
+}
+input{
+  padding-left: 8px !important;
+  box-shadow: inherit !important;
+  outline: none;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+input.leftIcon{
+  padding-left: 35px !important;
+}
+label{
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+}
+
+input.invalid{
+  border: 1px solid var(--text-col-error) !important;
+  color: var(--text-col-error) !important;
+  animation: shake 300ms;
+}
+.error-message,.error-message i{
+  font-size: 10px;
+  color: var(--text-col-error);
+}
+.formInput>i{
+  position: absolute;
+  display: flex;
   align-items: center;
+  height: 100%;
+  font-size: 15px;
+  padding-left: 12px !important;
+  color: var(--text-col-icon);
+}
+.formInput>i.invalid{
+  color: var(--text-col-error);
+}
+
+input.valid,i.valid {
+  color: var(--text-col-success) !important;
+  border-color: var(--text-col-success) !important;
+}
+.header{
+  position: relative;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+  background-color: var(--bg-bth);
+  color: #fff;
+  width: 100%;
+  height: 55px;
+  position: fixed !important;
+  top: 0px;
+  padding: 0 50px !important; 
+}
+.tableContainer{
+  margin-top: 60px;
+  position: relative;
+}
+.tableContainer .tableFixHead{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 90vw;
+  height: 80vh;  
+  transform: translate(-50%,10%);
+  background-color: rgba(225, 200, 200, 0);  
+  overflow-y: auto;
+  box-shadow: 0px 0px 10px 1px rgba(146, 176, 145, 0.19);
+  border-radius: 10px;
+  border: 1px solid #e3dfdf;
+}
+.tableFixHead{ 
+  overflow: auto; 
+  height: 100px; 
+}
+.tableFixHead thead th { 
+  position: sticky; 
+  top: 0; 
+  z-index: 1; 
+}
+
+table  { 
+  border-collapse: collapse; 
+  width: 100%; 
+}
+th, td{
+   padding: 8px 16px; 
+   text-align: center;
+}
+th{ 
+  background:#eee; 
+  text-align: center !important;
+}
+.noDataFound{
+  text-align: center;
+  color:var(--text-col-error);
+  align-items: center;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
 }
-
-.App-link {
-  color: #61dafb;
+.daterangepicker .drp-calendar{
+  max-width: inherit !important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes shake {
+  0%,100%{
+    transform: translate(0);
   }
-  to {
-    transform: rotate(360deg);
+  25%{
+    transform: translate(0.125rem);
+  }
+  75%{
+    transform: translate(-0.125rem);
   }
 }

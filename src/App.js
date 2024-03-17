@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from './Pages/Login';
+import Dashboard from './Pages/Dashboard';
+import { useEffect, useState } from 'react';
+import { UserContext } from './Context/userContext';
 function App() {
+  const [user,setUser] = useState(JSON.parse(localStorage.getItem("user")));
+  useEffect(()=>{
+    let user = JSON.parse(localStorage.getItem("user"));
+    setUser(user)
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <UserContext.Provider value = {user}>
+      <Routes>
+        <Route path='/' Component={Dashboard}/>
+        <Route path='/login' Component={Login}/>
+      </Routes>
+    </UserContext.Provider>
+    </BrowserRouter>
   );
 }
 

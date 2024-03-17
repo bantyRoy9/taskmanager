@@ -1,0 +1,77 @@
+.loginSignup-toggle{
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+.loginSignup-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30vw;
+  min-width: 300px;
+  height: 450px;  
+  transform: translate(-50%,-50%);
+  background-color: rgba(225, 200, 200, 0);  
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 1px rgba(146, 176, 145, 0.19);
+  border-radius: 10px;
+  border: 1px solid #e3dfdf;
+  padding: 25px;
+}
+.loginSignup-toggle>p:hover{
+    color: var(--text-col-header);
+}
+.loginSignup-box>div>button{
+    width: 42%;
+    border: none;
+    border-bottom:.5px solid var(--text-col-header);
+    transition: all .5s;
+    position: absolute;
+}
+
+.loginForm,.signupForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    padding: 2vmax;
+    gap: 20px;
+    transition: all 0.5s;
+    height: 80%;
+}
+
+
+.loginbtn,
+.signupbtn{
+    padding: .5vmax 1vmax;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background-color: var(--bg-bth);
+    color: #fff;
+    transition: all 0.5s;
+}
+.loginbtn:hover{
+    background-color:rgb(48, 83, 158);
+}
+
+.signupForm{
+    transform: translateY(-100%) translateX(-120%);
+}
+.signupFormNormal{
+    transform: translateX(0%) translateY(-95%);
+}
+.shiftToLeft{
+    transform: translateX(-120%);
+}
+.shiftToNormal{
+    transform: translateX(0%);
+}
+.shiftToRight{
+    transform: translateX(100%);
+}
